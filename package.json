@@ -1,0 +1,40 @@
+{
+	"name": "generator-f1lt3r",
+	"version": "1.0.0",
+	"description": "Yeoman Generator I use to setup my Node modules.",
+	"files": [
+		"generators"
+	],
+	"keywords": [
+		"yeoman-generator",
+		"ava",
+		"coveralls",
+		"nyc",
+		"coverage",
+		"istanbul",
+		"testing",
+		"node",
+		"module"
+	],
+	"dependencies": {
+		"yeoman-generator": "^2.0.3"
+	},
+	"xo": {
+		"esnext": true,
+		"semicolon": false,
+		"globals": [
+			"__dirname"
+		],
+		"rules": {
+			"no-console": 1,
+			"space-before-function-paren": 0
+		}
+	},
+	"devDependencies": {
+		"humanize-url": "^1.0.1",
+		"normalize-url": "^2.0.1",
+		"superb": "^2.0.0",
+		"underscore.string": "^3.3.4",
+		"xo": "^0.20.3"
+	}
+}
