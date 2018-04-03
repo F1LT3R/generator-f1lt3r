@@ -14,10 +14,9 @@
 		"preferGlobal": true,<% } %>
 	"scripts": {
 		"test": "xo && yarn run cover",
-        "unit": "ava ./lib/*.test.js /lib/**/*.test.js",
-        "watch": "ava --watch ./lib/*.test.js /lib/**/*.test.js",
-        "cover": "nyc --reporter=lcov --reporter=html --reporter=text ava lib/*.test.js lib/**/*.test.js && yarn run show-cov-link",
-        "show-cov-link": "node lib/misc/show-cov-link",
+        "unit": "ava",
+        "watch": "ava --watch",
+        "cover": "nyc --reporter=lcov --reporter=html --reporter=text ava *.test.js",
         "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
         "precommit": "yarn test"
 	},
@@ -35,6 +34,8 @@
 	"devDependencies": {
 		"ava": "latest",
 		"coveralls": "latest",
+		"git-hooks": "^1.1.10",
+		"git-pre-commit": "^2.1.3",
 		"nyc": "latest",
 		"xo": "latest"
 	},
