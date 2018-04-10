@@ -97,7 +97,7 @@ module.exports = class extends Generator {
 	}
 
 	install() {
-		this.yarnInstall(['xo', 'nyc', 'ava', 'coveralls'], {
+		this.yarnInstall(['xo', 'nyc', 'ava', 'coveralls', 'husky'], {
 			dev: true
 		})
 	}

@@ -17,8 +17,12 @@
         "unit": "ava",
         "watch": "ava --watch",
         "cover": "nyc --reporter=lcov --reporter=html --reporter=text ava *.test.js",
-        "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
-        "precommit": "yarn test"
+        "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn test"
+		}
 	},
 	"files": [
 		"index.js"<% if (cli) { %>,
@@ -34,8 +38,7 @@
 	"devDependencies": {
 		"ava": "latest",
 		"coveralls": "latest",
-		"git-hooks": "^1.1.10",
-		"git-pre-commit": "^2.1.3",
+		"husky": "latest",
 		"nyc": "latest",
 		"xo": "latest"
 	},
